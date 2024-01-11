@@ -10,13 +10,13 @@ Setup (local)
 * Install the required packages (Python 3.8, Docker etc..) (Skip if you cloned the project manually)
     ::
 
-        sudo bash ./resources/os-requirements.sh
+        sudo bash os_requirements.sh
 
 
 * build required project directories (Skip if you cloned the project manually)
     ::
 
-        bash ./resources/project-setup.sh
+        bash project_setup.sh
 
 
 * Activate the virtual environment (venv)

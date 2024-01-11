@@ -19,8 +19,8 @@ echoEmptyLines(){
 
 buildProjectFiles() {
     echoEmptyLines "Build project files"
-    mkdir tech_society
-    cd tech_society/
+    mkdir candidate_profiles
+    cd candidate_profiles/
     virtualenv venv --python=3.8
 
     repoURL="https://github.com/studymo64/candidates_profiles.git"
