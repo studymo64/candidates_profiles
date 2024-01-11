@@ -28,7 +28,7 @@ Setup (local)
 * Install project requirements:
     ::
 
-        cd candidates_profiles && pip install -r requirements.txt
+        cd candidates_profiles/candidate_profiles && pip install -r requirements.txt
 
 **(Windows/MacOS)**:
 ---------------------
