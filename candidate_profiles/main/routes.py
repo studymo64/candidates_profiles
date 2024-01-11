@@ -7,8 +7,10 @@ from repositories import UserRepository, CandidateRepository
 
 from fastapi import APIRouter, Depends, HTTPException
 from starlette import status
+from starlette.responses import JSONResponse
 from services import AuthService
 from services.report import ReportService
+
 
 auth_middleware = AuthService.get_current_user
 router = APIRouter()
@@ -17,7 +19,8 @@ router = APIRouter()
 # Health check
 @router.get("/health", status_code=status.HTTP_200_OK)
 async def health():
-    return "Server is up and running"
+    content = {"success": "Server is up and running"}
+    return JSONResponse(content=content, status_code=200)
 
 
 @router.post("/user", status_code=status.HTTP_201_CREATED)
