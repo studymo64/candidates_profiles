@@ -22,7 +22,7 @@ Setup (local)
 * Activate the virtual environment (venv)
     ::
 
-        cd candidates_profiles/
+        cd candidate_profiles/
         source venv/bin/activate
 
 * Install project requirements:
@@ -43,7 +43,7 @@ After Installation:
     >>> settings/
 
 * update your database keys in **/settings/keys.json**
-* Check **Makefile** for usual commands
+* Check **Makefile** for usual commands (go to the base dir where the Makefile lives)
     * **Start Project**:
     ::
 

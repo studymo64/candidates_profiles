@@ -9,5 +9,3 @@ services:
       - 8000:8000
     image: candidate_profiles:Elevatus
     container_name: candidate_profiles_container
-    env_file:
-      - env-vars.env
