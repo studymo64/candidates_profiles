@@ -1,0 +1,4 @@
+commands:
+
+
+1) uvicorn candidate_profiles.main.main:app --reload
