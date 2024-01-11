@@ -5,28 +5,30 @@ Setup (local)
 -------------
 **(Linux/ubuntu 22.04):**
 ---------------------------
-* Install the required packages (Python 3.8, Docker etc..)
+* Download the 2 setup scripts to your machine and run them OR clone master and setup manually (*refer to the scripts to know what you should download*)
+
+* Install the required packages (Python 3.8, Docker etc..) (Skip if you cloned the project manually)
     ::
 
         sudo bash ./resources/os-requirements.sh
 
 
-* build required project directories
+* build required project directories (Skip if you cloned the project manually)
     ::
 
-        bash project-setup.sh
+        bash ./resources/project-setup.sh
 
 
 * Activate the virtual environment (venv)
     ::
 
-        cd candidate_profiles/
+        cd candidates_profiles/
         source venv/bin/activate
 
 * Install project requirements:
     ::
 
-        cd candidate_profiles && pip install -r requirements.txt
+        cd candidates_profiles && pip install -r requirements.txt
 
 **(Windows/MacOS)**:
 ---------------------
