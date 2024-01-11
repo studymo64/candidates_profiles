@@ -7,7 +7,7 @@ from main.models import Candidate, UserBase
 
 class ReportService:
     THREAD_COUNT = 2
-    PAGE_SIZE = 5
+    PAGE_SIZE = 200
 
     def __init__(self, repository):
         self.__candidate_repository = repository()
