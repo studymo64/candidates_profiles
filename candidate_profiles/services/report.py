@@ -7,7 +7,7 @@ from main.models import Candidate, UserBase
 
 class ReportService:
     THREAD_COUNT = 2
-    PAGE_SIZE = 200
+    PAGE_SIZE = 1000
 
     def __init__(self, repository):
         self.__candidate_repository = repository()
@@ -18,16 +18,14 @@ class ReportService:
 
     def __fetch_documents(self, page):
         skip_value = page * self.PAGE_SIZE
-        cursor = self.__candidate_repository.paginate_candidates_for_report(skip_value, self.PAGE_SIZE)
-        return list(cursor)
+        return self.__candidate_repository.paginate_candidates_for_report(skip_value, self.PAGE_SIZE)
 
     def __paginated_generator(self, total_pages):
         with ThreadPoolExecutor(max_workers=2) as executor:
             futures = [executor.submit(self.__fetch_documents, page) for page in range(total_pages)]
-
             for future in futures:
-                documents = future.result()
-                for document in documents:
+                cursor = future.result()
+                for document in cursor:
                     yield document
 
     @staticmethod
